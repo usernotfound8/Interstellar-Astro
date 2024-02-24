@@ -26,11 +26,12 @@ If you plan on contributing here are some tips:
 To install:
 
 ```bash
-npm i
+pnpm i
 ```
+If that does not work, try running `npm i -g pnpm` and try again.
 
 To start the development server run:
 
 ```bash
-npm run dev
+pnpm dev
 ```
