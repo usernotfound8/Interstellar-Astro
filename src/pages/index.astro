@@ -1,23 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "@/layouts/Layout.astro";
 
 let splashtext: string[] = [
-  'Over 7 Million Users in 2023!',
-  'Fastest growing proxy server!',
-  'Made by Bubbo!',
-  'Check out discord.gg/interstellar :)',
+  "Over 7 Million Users in 2023!",
+  "Fastest growing proxy server!",
+  "Made by Bubbo!",
+  "Check out discord.gg/interstellar :)",
 ];
 
-const splash: string = splashtext[Math.floor(Math.random() * splashtext.length)];
+const splash: string =
+  splashtext[Math.floor(Math.random() * splashtext.length)];
 ---
-<Layout>
 
+<Layout>
   <h1 class="title">Interstellar</h1>
   <p id="splash">{splash}</p>
   <div class="search-container">
     <form id="fs" method="POST">
-      <input id="is" class="main-search" placeholder="Search with Google or enter address" type="text" />
+      <input
+        id="is"
+        class="main-search"
+        placeholder="Search with Google or enter address"
+        type="text"
+      />
     </form>
   </div>
   <!--- <div class="sug">
