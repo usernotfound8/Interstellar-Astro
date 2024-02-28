@@ -3,6 +3,11 @@
   <p>Interstellar + Astro</p>
 </div>
 
+> [!IMPORTANT]
+> If you fork this repository please consider giving it a star. It helps out a lot!
+
+<hr>
+
 ### What is it?
 
 An experimental version of Interstellar v5 using the Astro framework.
