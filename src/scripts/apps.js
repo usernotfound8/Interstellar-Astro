@@ -291,13 +291,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const columnDiv = document.createElement("div");
     columnDiv.classList.add("column");
     columnDiv.setAttribute("data-category", app.categories.join(" "));
-
     const pinIcon = document.createElement("i");
     pinIcon.classList.add("fa");
     pinIcon.classList.add("fa-map-pin");
     pinIcon.ariaHidden = true;
 
-    const btn = document.createElement("button");
+    /* const btn = document.createElement("button");
     btn.appendChild(pinIcon);
     btn.style.float = "right";
     btn.style.backgroundColor = "rgb(45,45,45)";
@@ -309,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.onclick = function () {
       setPin(pinNum);
     };
-    btn.title = "Pin";
+    btn.title = "Pin"; */
 
     const link = document.createElement("a");
 
@@ -358,9 +357,9 @@ document.addEventListener("DOMContentLoaded", () => {
     link.appendChild(image);
     link.appendChild(paragraph);
     columnDiv.appendChild(link);
-    if (appInd != 0) {
+    /* if (appInd != 0) {
       columnDiv.appendChild(btn);
-    }
+    } */
 
     if (pinList != null && appInd != 0) {
       if (pinContains(appInd, pinList)) {

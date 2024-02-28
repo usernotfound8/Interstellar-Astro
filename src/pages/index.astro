@@ -16,15 +16,55 @@ const splash: string =
   <h1 class="title">Interstellar</h1>
   <p id="splash">{splash}</p>
   <div class="search-container">
-    <form id="fs" method="POST">
+    <form id="fs" method="POST" autocomplete="off">
       <input
         id="is"
         class="main-search"
         placeholder="Search with Google or enter address"
         type="text"
+        onkeyup="showResults(this.value)"
       />
+      <br><div id="result"></div>
     </form>
   </div>
+
+  <script is:inline>
+
+  var search_terms = [
+  'games', 
+  'unblocked games', 
+  'roblox', 
+  'now.gg', 
+  'geforce now', 
+  'discord', 
+  'youtube', 
+  'github'];
+
+  function autocompleteMatch(input) {
+    if (input == '') {
+      return [];
+    }
+    var reg = new RegExp(input)
+    return search_terms.filter(function(term) {
+      if (term.match(reg)) {
+        return term;
+      }
+    });
+  }
+
+  function showResults(val) {
+    res = document.getElementById("result");
+    res.innerHTML = '';
+    let list = '';
+    let terms = autocompleteMatch(val);
+    for (i=0; i<terms.length; i++) {
+      list += '<li>' + terms[i] + '</li>';
+    }
+    res.innerHTML = '<ul>' + list + '</ul>';
+  }
+
+  </script>
+
   <!--- <div class="sug">
     <div class="sugelement" onclick="blank('https://google.com/')">Google</div></a><div class="sugelement" onclick="blank('https://youtube.com/')">Youtube</div></a> <div class="sugelement" onclick="blank('https://play.geforcenow.com')">GeForce</div></a> <div onclick="blank('https://now.gg/play/roblox-corporation/5349/roblox')" class="sugelement">Roblox</div>
   </div> --->

@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   if (themeid == "catppuccinLatte") {
     themeEle.href = "/assets/styles/themes/catppuccin/latte.css?v=1";
   }
+  if (themeid == "m") {
+    themeEle.href = "/assets/styles/themes/catppuccin/matrix.css";
+  }
   document.body.appendChild(themeEle);
 });
 
